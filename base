@@ -1,0 +1,7 @@
+#!/bin/sh
+BASEDIR=$(dirname "$0")
+
+source $BASEDIR/functions.sh
+
+#Auto completion for zsh
+fpath=($BASEDIR/completions $fpath)
