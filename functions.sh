@@ -1,4 +1,16 @@
 #!/bin/sh
+
+apps() {
+    IFS='/'
+    ARG_PATH="$*"
+    FULL_PATH=~/apps/$ARG_PATH
+    mkdir -p $FULL_PATH
+    cd $FULL_PATH
+    ls -ltr
+    echo "enjoy! \U1F920"
+}
+
+
 dev() {
     IFS='/'
     ARG_PATH="$*"

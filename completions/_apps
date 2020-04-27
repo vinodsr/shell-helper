@@ -1,0 +1,27 @@
+#compdef apps
+function _apps() {
+    APPS_BASE_FOLDER="/home/vinod/apps/"
+    _arguments '1: :->main' '*: :->sub'
+    case "$state" in
+    main)
+        local -a full_path
+        full_path=$APPS_BASE_FOLDER
+        local curcontext="$curcontext" state line ret=1
+        typeset -A opt_args
+        /bin/ls -F $APPS_BASE_FOLDER | grep \/$ | sed 's:/*$::' | while read entry; do
+            compadd "$entry"
+        done
+        ;;
+    sub)
+        res=""
+        i=$CURRENT
+        while [ $i -gt 1 ]; do
+            res="$words[$i]/$res"
+            i=$((i - 1))
+        done
+        /bin/ls -F $APPS_BASE_FOLDER$res 2>/apps/null | grep \/$ | sed 's:/$::' | while read entry; do
+            compadd "$entry"
+        done
+        ;;
+    esac
+}
