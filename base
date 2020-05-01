@@ -3,5 +3,9 @@ BASEDIR=$(dirname "$0")
 
 source $BASEDIR/functions.sh
 
+source $BASEDIR/exports.sh
+
+source $BASEDIR/alias.sh
+
 #Auto completion for zsh
 fpath=($BASEDIR/completions $fpath)
