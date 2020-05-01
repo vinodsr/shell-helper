@@ -7,5 +7,7 @@ source $BASEDIR/exports.sh
 
 source $BASEDIR/alias.sh
 
+export PATH=$PATH:$BASEDIR/utils
+
 #Auto completion for zsh
 fpath=($BASEDIR/completions $fpath)
