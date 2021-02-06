@@ -1,6 +1,6 @@
-#compdef dev
-function _dev() {
-    DEV_BASE_FOLDER="/home/vinod/dev/"
+#compdef tools
+function _tools() {
+    DEV_BASE_FOLDER="/home/vinod/tools/"
     _arguments '1: :->main' '*: :->sub'
     case "$state" in
     main)
@@ -19,7 +19,7 @@ function _dev() {
             res="$words[$i]/$res"
             i=$((i - 1))
         done
-        /bin/ls -F $DEV_BASE_FOLDER$res 2>/dev/null | grep \/$ | sed 's:/$::' | while read entry; do
+        /bin/ls -F $DEV_BASE_FOLDER$res 2>/tools/null | grep \/$ | sed 's:/$::' | while read entry; do
             compadd "$entry"
         done
         ;;

@@ -11,10 +11,20 @@ apps() {
 }
 
 
-dev() {
+work() {
     IFS='/'
     ARG_PATH="$*"
-    FULL_PATH=~/dev/$ARG_PATH
+    FULL_PATH=~/work/$ARG_PATH
+    mkdir -p $FULL_PATH
+    cd $FULL_PATH
+    ls -ltr
+    echo "enjoy! \U1F920"
+}
+
+tools() {
+    IFS='/'
+    ARG_PATH="$*"
+    FULL_PATH=~/tools/$ARG_PATH
     mkdir -p $FULL_PATH
     cd $FULL_PATH
     ls -ltr
