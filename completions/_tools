@@ -1,6 +1,6 @@
 #compdef tools
 function _tools() {
-    DEV_BASE_FOLDER="/home/vinod/tools/"
+    DEV_BASE_FOLDER="$HOME/tools/"
     _arguments '1: :->main' '*: :->sub'
     case "$state" in
     main)
