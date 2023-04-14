@@ -19,7 +19,7 @@ function _work() {
             res="$words[$i]/$res"
             i=$((i - 1))
         done
-        /bin/ls -F $DEV_BASE_FOLDER$res 2>/work/null | grep \/$ | sed 's:/$::' | while read entry; do
+        /bin/ls -F $DEV_BASE_FOLDER$res 2>/dev/null | grep \/$ | sed 's:/$::' | while read entry; do
             compadd "$entry"
         done
         ;;
