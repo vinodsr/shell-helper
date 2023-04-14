@@ -1,6 +1,6 @@
 #compdef work
 function _work() {
-    DEV_BASE_FOLDER="/home/vinod/work/"
+    DEV_BASE_FOLDER="$HOME/work/"
     _arguments '1: :->main' '*: :->sub'
     case "$state" in
     main)
