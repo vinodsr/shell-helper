@@ -11,3 +11,6 @@ export PATH=$PATH:$BASEDIR/utils
 
 #Auto completion for zsh
 fpath=($BASEDIR/completions $fpath)
+
+# Initialise the auto complete
+autoreload -U compinit; compinit
