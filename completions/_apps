@@ -19,7 +19,7 @@ function _apps() {
             res="$words[$i]/$res"
             i=$((i - 1))
         done
-        /bin/ls -F $APPS_BASE_FOLDER$res 2>/apps/null | grep \/$ | sed 's:/$::' | while read entry; do
+        /bin/ls -F $APPS_BASE_FOLDER$res 2>/dev/null | grep \/$ | sed 's:/$::' | while read entry; do
             compadd "$entry"
         done
         ;;
