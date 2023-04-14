@@ -13,4 +13,4 @@ export PATH=$PATH:$BASEDIR/utils
 fpath=($BASEDIR/completions $fpath)
 
 # Initialise the auto complete
-autoreload -U compinit; compinit
+autoload -U compinit; compinit
